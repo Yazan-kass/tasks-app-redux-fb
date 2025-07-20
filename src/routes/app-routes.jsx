@@ -16,10 +16,10 @@ let AppRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/" element={<LoginPage />} />
       <Route
         path="/dashboard"
-        element={loggedIn ? <Dashboard /> : <Navigate to="/login" />}
+        element={loggedIn ? <Dashboard /> : <Navigate to="/" />}
       >
         <Route path="/dashboard" element={<TasksPage />} />
         <Route path="/dashboard/tasks/new" element={<NewTaskPage />} />
